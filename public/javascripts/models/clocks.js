@@ -20,7 +20,7 @@ class Clocks {
   }
 
   digitsFor (time) {
-    const hours = leftPad(time.getHours() % 12).split('')
+    const hours = leftPad((time.getHours() % 12) || 12).split('')
     const mins = leftPad(time.getMinutes()).split('')
 
     return [...hours, ...mins]
